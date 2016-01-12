@@ -1,14 +1,20 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="texas",
     version="0.0",
-    py_modules=["convert"],
+    author="David Lukeš",
+    author_email="dafydd.lukes@gmail.com",
+    description="Scripts for the Texas Czech ELAN transcripts.",
+    license="GNU GPLv3",
+    url="https://github.com/dlukes/texas",
+
+    packages=find_packages(),
     install_requires=[
         "Click",
     ],
     entry_points="""
         [console_scripts]
         txeaf=convert:cli
-    """
+    """,
 )
